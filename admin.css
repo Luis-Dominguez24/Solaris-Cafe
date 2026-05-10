@@ -1,0 +1,182 @@
+:root {
+    --cafe-oscuro: #544941;
+    --cafe-claro: #d4a373;
+    --fondo: #f8f9fa;
+    --blanco: #ffffff;
+}
+
+body {
+    background-color: var(--fondo);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--cafe-oscuro);
+    color: white;
+    padding: 2rem;
+    
+    /* ESTO ES LO QUE BUSCAMOS */
+    position: sticky; 
+    top: 0; 
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    
+    /* Evita que el contenido interno de la sidebar se desborde si es muy largo */
+    overflow-y: auto; 
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.sidebar li {
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 8px; /* Bordes redondeados modernos */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar li:hover {
+    background: var(--cafe-claro); /* El color café clarito de tu paleta */
+    padding-left: 25px; /* Efecto de desplazamiento a la derecha */
+    color: var(--cafe-oscuro);
+}
+
+.sidebar li i {
+    font-size: 1.1rem;
+}
+
+/* Contenido */
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.stat-card .valor {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cafe-oscuro);
+    margin: 0.5rem 0;
+}
+
+.chart-container {
+    background: white;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.tabla-container {
+    background: white;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th {
+    text-align: left;
+    color: var(--cafe-oscuro);
+    border-bottom: 2px solid var(--fondo);
+    padding: 1rem;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--fondo);
+}
+
+.btn-borrar {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dev-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+    padding: 10px 15px;
+    border-radius: 50px; /* Bordes muy redondeados */
+    border: 1px solid rgba(84, 73, 65, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Efecto al pasar el mouse */
+.dev-badge:hover {
+    transform: translateY(-5px);
+    background: #544941; /* Cambia a tu color café oscuro */
+    color: white;
+}
+
+.dev-avatar {
+    width: 35px;
+    height: 35px;
+    background: #d4a373; /* Café claro */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: 0.8rem;
+}
+
+.dev-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.dev-info span {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.dev-info strong {
+    font-size: 0.9rem;
+}

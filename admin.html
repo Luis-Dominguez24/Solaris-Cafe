@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Solaris Admin - Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="admin.css"> <!-- Reutilizaremos tus colores -->
+</head>
+<body>
+    <div class="dashboard-wrapper">
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+        <h2>Solaris Admin</h2>
+        <ul>
+            <li><i class="fas fa-chart-line"></i> Resumen</li>
+            <li><i class="fas fa-utensils"></i> Productos</li>
+            <li><i class="fas fa-calendar-check"></i> Reservas</li>
+            <li><i class="fas fa-cog"></i> Ajustes</li>
+        </ul>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <header class="admin-header">
+            <h1>Panel de Control</h1>
+            <div class="user-info">Administrador <i class="fas fa-user-circle"></i></div>
+        </header>
+
+        <!-- Tarjetas de Resumen -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Ventas Hoy</h3>
+                <p class="valor">$450.25</p>
+                <span class="tendencia positiva">+15% vs ayer</span>
+            </div>
+            <div class="stat-card">
+                <h3>Reservas Pendientes</h3>
+                <p class="valor">8</p>
+                <span class="tendencia">Mesa para 4 (Próxima)</span>
+            </div>
+            <div class="stat-card">
+                <h3>Producto Estrella</h3>
+                <p class="valor">Cappuccino</p>
+                <span class="tendencia">24 vendidos</span>
+            </div>
+        </section>
+
+        <section class="tabla-container">
+    <h3>Últimas Reservas Realizadas</h3>
+    <table id="tabla-reservas">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Personas</th>
+                <th>Fecha</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="lista-reservas">
+            <!-- Aquí aparecerán los datos mágicamente -->
+        </tbody>
+    </table>
+</section>
+
+        <!-- Gráfica -->
+        <div class="chart-container">
+            <canvas id="graficaVentas"></canvas>
+        </div>
+    </main>
+</div>
+
+<div class="dev-badge">
+    <div class="dev-avatar">LD</div> <!-- Tus iniciales -->
+    <div class="dev-info">
+        <span>Desarrollado por</span>
+        <strong>Luis Dominguez</strong>
+    </div>
+</div>
+<script src="chart.js"></script>
+</body>
+</html>

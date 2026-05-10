@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Solaris Cafe</title>
+</head>
+<body>
+  <header>
+  <nav class="navbar">
+    <div class="logo">Solaris Café</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#menu-seccion">Nuestro Menú</a></li> <!-- El ID de tu sección de menú -->
+      <li><a href="#reservas">Reservar</a></li>         <!-- El ID de tu sección de reservas -->
+    </ul>
+  </nav>
+</header>
+
+  <section class="hero" id="inicio">
+    <h1 class="hero-texto">El despertar que tu dia necesita</h1>
+    <button class="hero-texto">Ver Menú</button>
+  </section>
+
+  <section class="nosotros">
+    <article class="nosotros-content">
+      <h1>Nosotros</h1>
+      <p>En Solaris Café, creemos que cada grano cuenta una historia. Nacimos de la pasión por los amaneceres y el aroma del café recién tostado. Trabajamos directamente con productores locales para traerte granos orgánicos de la más alta calidad, tostados artesanalmente en pequeños lotes para asegurar que cada taza sea el despertar que tu día necesita.</p>
+    </article>
+  </section>
+
+  <section class="menu-seccion" id="menu-seccion"></section>
+    <h2 class="titulo-menu">Nuestro Menú</h2>
+    
+    <div class="filtros">
+      <button class="btn-filtro" data-id="todos">Todos</button>
+      <button class="btn-filtro" data-id="cafe">Café</button>
+      <button class="btn-filtro" data-id="postres">Postres</button>
+    </div>
+
+    <div class="contenedor-productos">
+      <!-- Aquí JS meterá las tarjetas de productos -->
+    </div>
+  </section>
+
+  <section id="reservas" class="reservas-seccion">
+  <h2>Reserva tu Mesa</h2>
+  <form id="formulario-reserva">
+    <div class="control-formulario">
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" placeholder="Tu nombre aquí">
+    </div>
+
+    <div class="control-formulario">
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+    </div>
+
+    <div class="control-formulario">
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha">
+    </div>
+
+    <div class="control-formulario">
+      <label for="personas">Número de personas (1-10):</label>
+      <input type="number" id="personas" min="1" max="10" value="1">
+    </div>
+
+    <button type="submit" class="btn-reservar">Confirmar Reserva</button>
+    
+    <!-- Aquí aparecerán los mensajes de error o éxito -->
+    <div id="mensaje-respuesta" class="mensaje"></div>
+  </form>
+</section>
+
+  <footer class="footer">
+    <p>© 2024 Solaris Café. Hecho con ❤️ por Luis Dominguez.</p>
+    
+    <div class="icons-container">
+      <a href="#"> <i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+      <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <div class="dev-badge">
+    <div class="dev-avatar">LD</div> <!-- Tus iniciales -->
+    <div class="dev-info">
+        <span>Desarrollado por</span>
+        <strong>Luis Dominguez</strong>
+    </div>
+</div>
+
+  <script src="scripts.js"></script>
+  <script src="https://kit.fontawesome.com/2bd82ce76a.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Duración de la animación en milisegundos
+    once: true      // Para que solo anime la primera vez que bajas
+  });
+</script>
+</body>
+</html>
